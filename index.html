@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Event Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background: linear-gradient(135deg, #b9efc5, #88a2df);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 1.2px solid black;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .agenda,
+        .image-section {
+            width: 45%;
+        }
+
+        .agenda,
+        .image-section {
+            padding: 20px;
+        }
+
+        .image-section {
+            position: relative;
+            width: 70%;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .venue {
+            width: 55%;
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        fieldset {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SparkTech</h1>
+
+    <div class="container">
+        <div class="agenda">
+            <p>
+                SparkTech is a hub for connecting with the tech community, exchanging
+                ideas, and discovering cutting-edge innovations. It’s the perfect
+                event to grow your network and stay inspired by the future of
+                technology.
+            </p>
+            <h2>Event Agenda</h2>
+            <ol type="I">
+                <li>Introduction & Opening Speech</li>
+                <li>Keynote Speaker</li>
+                <li>Panel Discussion</li>
+                <li>Networking Session</li>
+                <li>Closing Remarks</li>
+            </ol>
+        </div>
+        <div class="image-section">
+            <p class="venue">Event Venue : Marina Bay Sands, Singapore</p>
+            <img src="https://images.pexels.com/photos/15480459/pexels-photo-15480459/free-photo-of-illuminated-modern-city-buildings-at-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Tech Event Venue" height="400" />
+        </div>
+    </div>
+
+    <h2>Our Speakers</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Mobile</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Jason Phelps</td>
+            <td>7566 Tech St, LA</td>
+            <td>+9474625632</td>
+            <td>john@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Janet Smith</td>
+            <td>486 Kendall st.</td>
+            <td>+0987654321</td>
+            <td>janet@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Moses Johnson</td>
+            <td>97 Java Rd, KE</td>
+            <td>+863229337</td>
+            <td>moses@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Sarah Lenny</td>
+            <td>500 Rust rd, Msa</td>
+            <td>+976343596</td>
+            <td>sarah@gmail.com</td>
+        </tr>
+        <tr>
+            <td>David Brown</td>
+            <td>634 Tom Mboya st, Nrb</td>
+            <td>+6732532892</td>
+            <td>david@gmail.com</td>
+        </tr>
+    </table>
+
+    <fieldset>
+        <legend>Register for the Event</legend>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required /><br /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required /><br /><br />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required /><br /><br />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required max="2006-03-30">
+            <span id="dobError" style="color: red;"></span>
+            <br /><br />
+
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" required>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Product Manager</option>
+            </select><br /><br />
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" required /> Male
+            <input type="radio" name="gender" value="female" required /> Female
+            <input type="radio" name="gender" value="other" /> Other<br /><br />
+
+            <label>Interests:</label>
+            <input type="checkbox" name="interest" value="AI" /> AI
+            <input type="checkbox" name="interest" value="Cloud" /> Cloud
+            <input type="checkbox" name="interest" value="Cybersecurity" />
+            Cybersecurity
+            <input type="checkbox" name="interest" value="Web Dev" /> Web Dev<br /><br />
+
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+</body>
+
+</html>
